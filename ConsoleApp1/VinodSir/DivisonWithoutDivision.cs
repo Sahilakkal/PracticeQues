@@ -11,45 +11,45 @@ namespace ConsoleApp1.VinodSir
 
         class Program
         {
-            static void Main()
+            static void Main111()
             {
+                int dividend = 13;
+                int divisor = 3;
 
-                double dividend = 10;
-                double divisor = 3;
-
-
-                double result = DivideWithoutDividee(dividend, divisor);
-
-                Console.WriteLine($"Answ: {result}");
+                int quotient = RestoringDivision(dividend, divisor);
+                Console.WriteLine($"Quotient: {quotient}");
             }
 
-
-            static double DivideWithoutDividee(double dividend, double divisor)
+            static int RestoringDivision(int dividend, int divisor)
             {
-                double result = 0;
-
-                while (dividend >= divisor)
+                if (divisor == 0)
                 {
-                    dividend -= divisor;
-                    result++;
+                    throw new DivideByZeroException("Division by zero is not allowed.");
                 }
 
+                bool isNegative = (dividend < 0) ^ (divisor < 0);
+                dividend = Math.Abs(dividend);
+                divisor = Math.Abs(divisor);
 
-                double fraction = 0.1;
+                int quotient = 0;
+                int remainder = 0;
 
-                for (int precision = 0; precision < 15; precision++)
+                for (int i = 31; i >= 0; i--)
                 {
-                    if (dividend >= divisor)
+                    remainder <<= 1; // Left shift remainder
+                    remainder |= ((dividend >> i) & 1); // Extract bit from dividend to remainder
+
+                    if (remainder >= divisor)
                     {
-                        dividend -= divisor;
-                        fraction *= 0.1;
-                        result += fraction;
+                        remainder -= divisor;
+                        quotient |= (1 << i); // Set bit in quotient
                     }
                 }
 
-                return result;
+                return isNegative ? -quotient : quotient;
             }
         }
 
-    }
 
+    }
+}

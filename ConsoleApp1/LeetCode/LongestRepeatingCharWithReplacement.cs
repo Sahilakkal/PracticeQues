@@ -13,14 +13,10 @@ namespace ConsoleApp1.LeetCode
             bool check = false;
             int currentCount = 0;
             int maxCount = 0;
-          //  bool startMatching = false;
+            bool startMatching = false;
             for (head = 0; head < text.Length; head++)
             {
               
-                
-
-
-                while (tail < text.Length)
                 {
                     if (text[tail] == text[head])
                     {

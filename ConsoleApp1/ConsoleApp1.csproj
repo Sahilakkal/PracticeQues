@@ -49,9 +49,11 @@
     <Compile Include="LeetCode\LongestSubstring.cs" />
     <Compile Include="LeetCode\ValidParenthesis.cs" />
     <Compile Include="MyDataStructures\MyStack.cs" />
+    <Compile Include="PracticeQues\bodmas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Programss\Combination.cs" />
     <Compile Include="Programss\practice.cs" />
+    <Compile Include="Programss\program.cs" />
     <Compile Include="Programss\Searching.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VinodSir\attribrute.cs" />
@@ -63,6 +65,8 @@
     <Compile Include="VinodSir\PrecedenceOp.cs" />
     <Compile Include="VinodSir\RecordType.cs" />
     <Compile Include="VinodSir\Statement.cs" />
+    <Compile Include="VinodSir\StringConstructorr.cs" />
+    <Compile Include="VinodSir\StringInterning.cs" />
     <Compile Include="VinodSir\Switch.cs" />
   </ItemGroup>
   <ItemGroup>

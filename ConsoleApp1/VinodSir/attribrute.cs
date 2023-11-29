@@ -42,7 +42,7 @@ namespace ConsoleApp1.VinodSir
 
         class Program
         {
-            static void Main()
+            static void Main222()
             {
                 // Retrieving and using the custom attribute
                 var carFuelType = GetFuelType<Car>();
